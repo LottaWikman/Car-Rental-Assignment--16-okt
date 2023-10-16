@@ -1,0 +1,44 @@
+﻿@page "/"
+@using Business.Classes;
+@inject BookingProcessor processor
+
+<PageTitle>Vehicles</PageTitle>
+
+<h1>Vehicles</h1>
+
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>RegNo</th>
+            <th>Make</th>
+            <th>Odometer</th>
+            <th>$/km</th>
+            <th>Vehicle Type</th>
+            <th>$/day</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var vehicle in processor.GetVehicles())
+        {
+            <tr>
+                <td>@vehicle.RegNo</td>
+                <td>@vehicle.Make</td>
+                <td>@vehicle.Odometer.ToString("#,##0")</td>
+                <td>@vehicle.PricePerKm</td>
+                <td>@vehicle.VehicleType</td>
+                <td>@vehicle.PricePerDay</td>
+                <td>
+                    <center>
+                        <div class="@(vehicle.Status ? "available" : "booked")">@(vehicle.Status ? "Available" : "Booked")</div>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
