@@ -4,9 +4,7 @@ using Car_Rental.Common.Interfaces;
 namespace Car_Rental.Common.Classes;
 
 public class Motorcycle : IVehicle
-{
-
-    //Properties som alla MOTORCYKLAR måste ha:
+{   
     public string RegNo { get; set; }
     public string Make { get; set; }
     public int Odometer { get; set; }

@@ -5,8 +5,6 @@ namespace Car_Rental.Common.Classes;
 
 public class Airplane : IVehicle
 {
-
-    //Properties som alla FLYGPLAN måste ha:
     public string RegNo { get; set; }
     public string Make { get; set; }
     public int Odometer { get; set; }
@@ -20,6 +18,4 @@ public class Airplane : IVehicle
         (RegNo, Make, Odometer, PricePerKm, VehicleType, PricePerDay, Status) =
             (regNo, make, odometer, pricePerKm, vehicleType, pricePerDay, status);
     }
-
-
 }

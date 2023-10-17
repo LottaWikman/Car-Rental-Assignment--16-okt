@@ -4,7 +4,6 @@ namespace Car_Rental.Common.Interfaces;
 
 public interface IVehicle
 {
-   //Kontraktet för alla fordon (bilar, motorcyklar & flygplan):
     public string RegNo { get; set; }
     public string Make { get; set; }
     public int Odometer { get; set; }

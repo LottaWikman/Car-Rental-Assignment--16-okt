@@ -5,8 +5,6 @@ namespace Car_Rental.Common.Classes;
 
 public class Car : IVehicle
 {
-
-    //Properties som alla BILAR måste ha:
     public string RegNo { get; set; }
     public string Make { get; set; }
     public int Odometer { get; set; }
